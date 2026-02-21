@@ -1,2 +1,18 @@
-# Auto detect text files and perform LF normalization
-* text=auto
+#Students Names:shamma abdulla Grade:9-adv
+####################################
+#importing required libraries from tkinter
+from tkinter import *
+import pygame
+root = Tk()
+root.title("MP3 player")
+root.geonetry("500x300")
+pygame.mixer.init()
+#  initlalise the pygame
+def play():
+ pygame.mixer.music.load("music.mp3")
+ pygame.mixer.music.play(loops=0)
+title=Label(root,text="MyMusicPlayer",bd=9,relief=GROOVE,font=("times new romen",40,"bold"),bd="white",fg="green")
+title.pack(side=TOP,fill=X)
+play_button = Button(root, text="Play", font=("Helvetica", 32), command=play)
+play_button.pack(pady=20)
+root.mainloop()
